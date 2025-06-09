@@ -10,7 +10,7 @@ const Projects = () => {
     // Video Editing Projects with new thumbnails
     {
       id: 1,
-      title: "Creative Video Edit #1",
+      title: "DGineers Introduction",
       description: "Professional video editing showcasing creative transitions and effects.",
       category: "video",
       tags: ["Premiere Pro", "After Effects", "Motion Graphics"],
@@ -78,7 +78,7 @@ const Projects = () => {
     // Android Development Projects
     {
       id: 7,
-      title: "Avishkar Career Compass",
+      title: "Avishkar Career Academy",
       description: "Mobile application for career guidance and educational resources with user authentication.",
       category: "android",
       tags: ["React Native", "Career Guidance", "Authentication", "Education"],
@@ -147,7 +147,7 @@ const Projects = () => {
     },
     {
       id: 14,
-      title: "Medical Services - Doctor Information",
+      title: "Visiting Card",
       description: "Professional medical service brochure design showcasing doctor credentials and services.",
       category: "graphics",
       tags: ["Medical Design", "Healthcare", "Professional Brochure", "Information Design"],
@@ -156,7 +156,7 @@ const Projects = () => {
     },
     {
       id: 15,
-      title: "Healthcare Services Portfolio",
+      title: "Visiting Card - Healthcare Services Portfolio",
       description: "Comprehensive healthcare services design with modern medical interface elements.",
       category: "graphics",
       tags: ["Healthcare Design", "Medical Services", "Modern UI", "Professional"],
@@ -174,7 +174,7 @@ const Projects = () => {
     },
     {
       id: 17,
-      title: "DG Neers Media Logo",
+      title: "DGineers Media Logo",
       description: "Elegant and professional logo design for DG Neers Media with sophisticated typography.",
       category: "graphics",
       tags: ["Logo Design", "Branding", "Typography", "Corporate Identity"],
@@ -183,7 +183,7 @@ const Projects = () => {
     },
     {
       id: 18,
-      title: "Video Thumbnail Design #1",
+      title: "Dream PC Build",
       description: "Eye-catching video thumbnail design with engaging visual elements and typography.",
       category: "graphics",
       tags: ["Thumbnail Design", "Video Graphics", "Visual Design", "Social Media"],
@@ -192,7 +192,7 @@ const Projects = () => {
     },
     {
       id: 19,
-      title: "Video Thumbnail Design #2",
+      title: "Color Grading",
       description: "Dynamic video thumbnail with bold colors and engaging visual storytelling.",
       category: "graphics",
       tags: ["Thumbnail Design", "YouTube Graphics", "Visual Impact", "Content Creation"],
@@ -201,7 +201,7 @@ const Projects = () => {
     },
     {
       id: 20,
-      title: "Video Thumbnail Design #3",
+      title: "Wordpress Tutorial 2024",
       description: "Creative video thumbnail design showcasing visual effects and engaging composition.",
       category: "graphics",
       tags: ["Thumbnail Design", "Visual Effects", "Creative Design", "Digital Art"],
@@ -210,7 +210,7 @@ const Projects = () => {
     },
     {
       id: 21,
-      title: "Video Thumbnail Design #4",
+      title: "GTA 5 - Ganpati Celebration",
       description: "High-energy video thumbnail with bold graphics and attention-grabbing design elements.",
       category: "graphics",
       tags: ["Thumbnail Design", "High Energy", "Bold Graphics", "Visual Impact"],
