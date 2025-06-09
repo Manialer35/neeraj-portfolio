@@ -1,3 +1,4 @@
+
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -109,7 +110,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12 px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 sm:mb-20 px-4">
             <Button 
               size="lg" 
               onClick={scrollToProjects}
