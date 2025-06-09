@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,7 +8,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    // Video Editing Projects
+    // Video Editing Projects with thumbnails
     {
       id: 1,
       title: "Creative Video Edit #1",
@@ -15,6 +16,7 @@ const Projects = () => {
       category: "video",
       tags: ["Premiere Pro", "After Effects", "Motion Graphics"],
       videoUrl: "https://drive.google.com/file/d/1o1DMkvRBvNJFvI3S4N_Q-U6Ws68keDbQ/view?usp=drive_link",
+      thumbnail: "/lovable-uploads/c05312dd-a287-41ae-a891-6dd12351a89b.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -25,6 +27,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Mobile Editing", "Social Media"],
       videoUrl: "https://youtube.com/shorts/uaCeP8Xke24?si=H_2Xm0l7dyOLtpSq",
+      thumbnail: "/lovable-uploads/0d865d7d-f639-482f-8c96-ad287f94ce1a.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -35,6 +38,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Visual Effects", "Storytelling"],
       videoUrl: "https://youtube.com/shorts/Tl5o8J8p5Ck?si=TiNSYsXAZrsVoXex",
+      thumbnail: "/lovable-uploads/e0af69df-0997-47c5-8945-a52f5adb5d0d.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -45,6 +49,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Audio Sync", "High Energy"],
       videoUrl: "https://youtube.com/shorts/WqQK1u4XpZE?si=UOiAzfuzI8lJkFGm",
+      thumbnail: "/lovable-uploads/4a72b6fc-86a8-461a-b267-9a8fe1510414.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -90,19 +95,55 @@ const Projects = () => {
       description: "AI-powered system using LSTM neural networks to detect and classify fake news articles.",
       category: "ai",
       tags: ["Python", "LSTM", "Machine Learning", "NLP"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400",
+      image: "/lovable-uploads/7064506a-ec62-4478-869e-22f5258d8607.png",
       projectUrl: "https://github.com/Manialer35/fake-news-detection-lstm",
       gradient: "from-orange-400 to-red-600"
     },
 
-    // Graphics Design Projects (keeping original examples)
+    // Graphics Design Projects
     {
       id: 9,
-      title: "Corporate Branding Package",
-      description: "Complete visual identity design including logo, business cards, and marketing materials.",
+      title: "AdSmart AI - Web Design",
+      description: "Modern AI-powered advertising platform interface design with sleek dark theme.",
       category: "graphics",
-      tags: ["Illustrator", "Photoshop", "Brand Design", "Print"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=400",
+      tags: ["UI/UX Design", "Web Design", "AI Platform", "Dark Theme"],
+      image: "/lovable-uploads/1fd2f95a-f546-41f7-9e73-c465b1b5e79d.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 10,
+      title: "RAJ Computer Academy - Educational Posters",
+      description: "Educational promotional designs for computer training institute with vibrant layouts.",
+      category: "graphics",
+      tags: ["Educational Design", "Poster Design", "Print Media", "Branding"],
+      image: "/lovable-uploads/10400284-aba7-4d59-8db3-cd66bc96390e.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 11,
+      title: "Valentine's Day Campaign",
+      description: "Festive promotional design for educational institute's Valentine's Day admission campaign.",
+      category: "graphics",
+      tags: ["Campaign Design", "Festive Theme", "Social Media", "Promotional"],
+      image: "/lovable-uploads/0d6b408c-ed10-420f-8565-69c0ea7c9d32.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 12,
+      title: "Digital Marketing Infographic",
+      description: "Professional infographic design explaining the importance of digital marketing.",
+      category: "graphics",
+      tags: ["Infographic", "Digital Marketing", "Business", "Professional"],
+      image: "/lovable-uploads/ad1242c6-edf8-48da-a30b-befb52f97a8d.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 13,
+      title: "Tally Prime Course Promotion",
+      description: "Educational course promotion design highlighting Tally Prime software features and benefits.",
+      category: "graphics",
+      tags: ["Course Design", "Educational", "Software Training", "Professional"],
+      image: "/lovable-uploads/7ef4978a-1f47-4332-a98c-ae032efa225c.png",
       gradient: "from-purple-400 to-blue-600"
     }
   ];
@@ -169,12 +210,19 @@ const Projects = () => {
             >
               <div className="relative overflow-hidden">
                 {project.isVideo ? (
-                  <div className="w-full h-40 sm:h-48 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center relative">
-                    <div className="text-white text-center">
-                      <div className="text-4xl mb-2">▶️</div>
-                      <p className="text-sm font-medium">Click to Watch Video</p>
+                  <div className="relative">
+                    <img 
+                      src={project.thumbnail} 
+                      alt={project.title}
+                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <div className="text-white text-center">
+                        <div className="text-4xl mb-2">▶️</div>
+                        <p className="text-sm font-medium">Click to Watch Video</p>
+                      </div>
                     </div>
-                    <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-60 transition-opacity duration-300`}></div>
                   </div>
                 ) : (
                   <>
