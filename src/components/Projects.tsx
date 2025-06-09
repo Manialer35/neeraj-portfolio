@@ -37,7 +37,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Visual Effects", "Storytelling"],
       videoUrl: "https://youtube.com/shorts/Tl5o8J8p5Ck?si=TiNSYsXAZrsVoXex",
-      thumbnail: "/lovable-uploads/bce10a45-321e-45c8-a154-aed572bc0a4c.png",
+      thumbnail: "/lovable-uploads/dce811a7-14de-43a1-bcfb-184014457fbb.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -48,7 +48,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Audio Sync", "High Energy"],
       videoUrl: "https://youtube.com/shorts/WqQK1u4XpZE?si=UOiAzfuzI8lJkFGm",
-      thumbnail: "/lovable-uploads/dce811a7-14de-43a1-bcfb-184014457fbb.png",
+      thumbnail: "/lovable-uploads/bce10a45-321e-45c8-a154-aed572bc0a4c.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
