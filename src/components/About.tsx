@@ -101,8 +101,8 @@ const About = () => {
 
           {/* Image and Stats Section - Right Side */}
           <div className="space-y-8 animate-fade-in order-1 lg:order-2">
-            {/* Large Profile Image with Enhanced Decorations */}
-            <div className="flex justify-center lg:justify-end mb-8">
+            {/* Large Profile Image with Enhanced Decorations - Centered */}
+            <div className="flex justify-center mb-8">
               <div className="relative">
                 {/* Multiple Floating Particles */}
                 <div className="absolute -top-8 -left-8 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-bounce opacity-70"></div>
@@ -128,13 +128,13 @@ const About = () => {
                 <div className="absolute inset-0 w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-purple-400/20 animate-ping"></div>
                 <div className="absolute inset-0 w-76 h-76 sm:w-84 sm:h-84 rounded-full border border-blue-400/15 animate-pulse"></div>
                 
-                {/* Main Image Container - Large Size */}
+                {/* Main Image Container - Large Size with Enhanced Clarity */}
                 <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-2 shadow-2xl relative">
                   <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900">
                     <img 
                       src="/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png" 
                       alt="Neeraj Madkar" 
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 brightness-125 contrast-110 saturate-110 filter"
                     />
                   </div>
                   {/* Enhanced Animated Glow */}
