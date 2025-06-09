@@ -7,41 +7,41 @@
 
 @layer base {
   :root {
-    --background: 345 100% 97%;
-    --foreground: 345 30% 15%;
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
 
-    --card: 345 50% 95%;
-    --card-foreground: 345 30% 15%;
+    --card: 0 0% 96%;
+    --card-foreground: 220 15% 15%;
 
-    --popover: 345 50% 95%;
-    --popover-foreground: 345 30% 15%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 330 81% 60%;
-    --primary-foreground: 345 100% 97%;
+    --primary: 260 60% 45%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 315 100% 85%;
-    --secondary-foreground: 345 30% 15%;
+    --secondary: 350 100% 88%;
+    --secondary-foreground: 220 15% 15%;
 
-    --muted: 320 60% 92%;
-    --muted-foreground: 345 20% 45%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 300 100% 80%;
-    --accent-foreground: 345 30% 15%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 15% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 345 100% 97%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 320 40% 85%;
-    --input: 320 40% 90%;
-    --ring: 330 81% 60%;
-    --sidebar-background: 345 60% 92%;
-    --sidebar-foreground: 345 30% 15%;
-    --sidebar-primary: 330 81% 60%;
-    --sidebar-primary-foreground: 345 100% 97%;
-    --sidebar-accent: 315 100% 85%;
-    --sidebar-accent-foreground: 345 30% 15%;
-    --sidebar-border: 320 40% 85%;
-    --sidebar-ring: 330 81% 60%;
+    --border: 220 13% 85%;
+    --input: 220 13% 90%;
+    --ring: 260 60% 45%;
+    --sidebar-background: 210 40% 95%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 260 60% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 350 100% 88%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 220 13% 85%;
+    --sidebar-ring: 260 60% 45%;
   }
 }
 
@@ -65,14 +65,26 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-rose-500 via-pink-400 to-purple-500 bg-clip-text text-transparent;
   }
   
   .bg-gradient-primary {
-    @apply bg-gradient-to-r from-pink-400 via-rose-400 to-purple-500;
+    @apply bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700;
   }
   
   .bg-gradient-secondary {
-    @apply bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400;
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-700;
+  }
+  
+  .bg-gradient-warm {
+    @apply bg-gradient-to-r from-rose-500 via-pink-400 to-purple-500;
+  }
+  
+  .bg-rich-dark {
+    @apply bg-gradient-to-br from-slate-800 via-gray-900 to-slate-900;
   }
 }
