@@ -15,7 +15,7 @@ const Projects = () => {
       category: "video",
       tags: ["Premiere Pro", "After Effects", "Motion Graphics"],
       videoUrl: "https://drive.google.com/file/d/1o1DMkvRBvNJFvI3S4N_Q-U6Ws68keDbQ/view?usp=drive_link",
-      thumbnail: "/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png",
+      thumbnail: "/lovable-uploads/81dd9d51-3185-4eb3-91ce-8c45dee466ee.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
