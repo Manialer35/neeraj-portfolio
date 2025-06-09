@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,10 +19,17 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
+    // Create mailto link for sending email
+    const mailtoLink = `mailto:neerajmadkar35@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: "Email Client Opened!",
+      description: "Your default email client has been opened with the message. Please send it to complete the contact.",
     });
     
     // Reset form
@@ -39,19 +47,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@portfolio.com",
+      value: "neerajmadkar35@gmail.com",
       gradient: "from-blue-400 to-cyan-500"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 8888769281",
       gradient: "from-green-400 to-emerald-500"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "India, Maharashtra, Pune",
       gradient: "from-purple-400 to-pink-500"
     }
   ];
@@ -83,7 +91,7 @@ const Contact = () => {
                   <div>
                     <Input
                       name="name"
-                      placeholder="Your Name"
+                      placeholder="Your Name *"
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -94,7 +102,7 @@ const Contact = () => {
                     <Input
                       name="email"
                       type="email"
-                      placeholder="Your Email"
+                      placeholder="Your Email *"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -106,7 +114,7 @@ const Contact = () => {
                 <div>
                   <Input
                     name="subject"
-                    placeholder="Subject"
+                    placeholder="Subject *"
                     value={formData.subject}
                     onChange={handleChange}
                     required
@@ -117,7 +125,7 @@ const Contact = () => {
                 <div>
                   <Textarea
                     name="message"
-                    placeholder="Your Message"
+                    placeholder="Your Message *"
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}

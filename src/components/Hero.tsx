@@ -40,17 +40,34 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          {/* Professional Avatar */}
+          {/* Professional Avatar with Decorations */}
           <div className="mb-6 sm:mb-8 relative">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 animate-scale-in shadow-2xl">
+            {/* Floating Decoration Elements */}
+            <div className="absolute -top-8 -left-8 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-bounce opacity-60"></div>
+            <div className="absolute -top-6 -right-6 w-3 h-3 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce delay-300 opacity-60"></div>
+            <div className="absolute -bottom-6 -left-6 w-3 h-3 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-bounce delay-500 opacity-60"></div>
+            <div className="absolute -bottom-8 -right-8 w-4 h-4 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full animate-bounce delay-700 opacity-60"></div>
+            
+            {/* Rotating Ring Decoration */}
+            <div className="absolute inset-0 w-32 h-32 sm:w-40 sm:h-40 mx-auto animate-spin-slow">
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-pink-400/30"></div>
+            </div>
+            
+            {/* Pulsing Outer Ring */}
+            <div className="absolute inset-0 w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full border border-purple-400/20 animate-ping"></div>
+            
+            <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 animate-scale-in shadow-2xl relative">
               <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
-                  alt="Professional Avatar" 
-                  className="w-full h-full object-cover rounded-full"
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face" 
+                  alt="Neeraj Madkar" 
+                  className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-500"
                 />
               </div>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 animate-pulse"></div>
             </div>
+            
             <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-8 h-8 sm:w-10 sm:h-10 bg-emerald-400 rounded-full animate-pulse border-2 sm:border-4 border-slate-800 flex items-center justify-center">
               <div className="w-3 h-3 bg-emerald-600 rounded-full animate-ping"></div>
             </div>

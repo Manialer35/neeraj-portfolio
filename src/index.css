@@ -107,11 +107,24 @@
     }
   }
 
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .animate-slide-right {
     animation: slide-right 10s linear infinite;
   }
 
   .animate-grid-move {
     animation: grid-move 20s linear infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
   }
 }

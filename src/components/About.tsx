@@ -4,9 +4,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const About = () => {
   const stats = [
-    { icon: Award, label: "Projects Completed", value: "50+", color: "from-rose-500 to-pink-600" },
-    { icon: Users, label: "Happy Clients", value: "30+", color: "from-purple-500 to-indigo-600" },
-    { icon: Coffee, label: "Cups of Coffee", value: "1000+", color: "from-amber-500 to-orange-600" },
+    { icon: Users, label: "Happy Clients", value: "15+", color: "from-rose-500 to-pink-600" },
+    { icon: Award, label: "Projects Completed", value: "20+", color: "from-purple-500 to-indigo-600" },
+    { icon: Coffee, label: "Cups of Coffee", value: "100+", color: "from-amber-500 to-orange-600" },
     { icon: Clock, label: "Years Experience", value: "5+", color: "from-emerald-500 to-teal-600" }
   ];
 
@@ -37,36 +37,79 @@ const About = () => {
           {/* Profile Section */}
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center space-x-6">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 shadow-xl">
-                <div className="w-full h-full rounded-full overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
-                    alt="Profile" 
-                    className="w-full h-full object-cover"
-                  />
+              {/* Large Profile Image with Decorations */}
+              <div className="relative">
+                {/* Floating Particles */}
+                <div className="absolute -top-4 -left-4 w-2 h-2 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-bounce opacity-70"></div>
+                <div className="absolute -top-6 -right-2 w-3 h-3 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce delay-200 opacity-70"></div>
+                <div className="absolute -bottom-2 -left-6 w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-bounce delay-400 opacity-70"></div>
+                <div className="absolute -bottom-4 -right-4 w-3 h-3 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full animate-bounce delay-600 opacity-70"></div>
+                
+                {/* Rotating Rings */}
+                <div className="absolute inset-0 w-32 h-32 sm:w-36 sm:h-36 animate-spin-slow">
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-pink-400/30"></div>
+                </div>
+                
+                {/* Pulsing Outer Ring */}
+                <div className="absolute inset-0 w-36 h-36 sm:w-40 sm:h-40 rounded-full border border-purple-400/20 animate-ping"></div>
+                
+                {/* Main Image Container */}
+                <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 shadow-2xl relative">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900">
+                    <img 
+                      src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face" 
+                      alt="Neeraj Madkar" 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  {/* Animated Glow */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 animate-pulse"></div>
                 </div>
               </div>
+              
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Your Name</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Neeraj Madkar</h3>
                 <p className="text-rose-400 font-medium">Creative Developer</p>
               </div>
             </div>
             
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
-                I'm a passionate creative developer with over 5 years of experience in crafting digital experiences. 
-                My journey spans across multiple domains including video editing, graphics design, web development, 
-                AI projects, and Android development.
+                Hey there! I'm Neeraj Madkar, a passionate and driven tech enthusiast with a strong background in Web Development, Android App Development, and Artificial Intelligence. I'm a Computer Science graduate with hands-on experience building intelligent solutions that bridge creativity and technology.
               </p>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
-                I believe in the power of combining creativity with technology to solve real-world problems. 
-                Whether it's creating stunning visuals, developing intuitive applications, or implementing 
-                cutting-edge AI solutions, I'm always excited to take on new challenges.
+                I've worked with startups, handled freelance projects on platforms like Fiverr, and co-founded ventures such as CollabxMedia and DGINEERS, where I continue to push the boundaries of what technology can do. Whether it's building modern websites, integrating AI chatbots, or optimizing digital strategies, I thrive on solving real-world problems through code and innovation.
               </p>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                When I'm not coding or designing, you can find me exploring new technologies, contributing to 
-                open-source projects, or mentoring aspiring developers.
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
+                I'm also a Snapchat Opinion Leader, contributing to digital discussions and trends. Beyond development, I'm deeply interested in ethical hacking, cybersecurity, and using AI for societal good.
               </p>
+              
+              <div className="mt-6 space-y-4">
+                <div>
+                  <h4 className="text-emerald-400 font-semibold text-lg mb-2">🔍 Currently Working On:</h4>
+                  <ul className="text-gray-300 space-y-1 ml-4">
+                    <li>• My First Book on AI ( Launching Soon!!! )</li>
+                    <li>• A research paper on "AI for Society"</li>
+                    <li>• Building my personal brand</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-pink-400 font-semibold text-lg mb-2">🎯 My Mission:</h4>
+                  <p className="text-gray-300">
+                    To use AI and technology not just to build cool projects—but to create a meaningful impact on daily life, national defense, and the future of work. I believe in ethical, responsible AI that empowers individuals over institutions.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="text-purple-400 font-semibold text-lg mb-2">🚀 What Sets Me Apart:</h4>
+                  <ul className="text-gray-300 space-y-1 ml-4">
+                    <li>• Unique blend of development, creativity, and cybersecurity</li>
+                    <li>• Real startup and client-facing experience</li>
+                    <li>• Self-learning mindset with the drive to compete with the best in the world (yes, even Elon Musk 😉)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
