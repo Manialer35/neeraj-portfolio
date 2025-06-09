@@ -1,4 +1,3 @@
-
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -68,11 +67,11 @@ const Hero = () => {
             
             {/* Main Image Container - Clear and Centered */}
             <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1.5 animate-scale-in shadow-2xl relative">
-              <div className="w-full h-full rounded-full overflow-hidden bg-slate-800 flex items-center justify-center">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-800 flex items-end justify-center pb-2">
                 <img 
                   src="/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png" 
                   alt="Neeraj Madkar" 
-                  className="w-full h-full object-cover object-center rounded-full hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-[center_20%] rounded-full hover:scale-110 transition-transform duration-500"
                 />
               </div>
             </div>

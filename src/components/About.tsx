@@ -129,11 +129,11 @@ const About = () => {
                 
                 {/* Main Image Container - Fixed sizing and clarity */}
                 <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-2 shadow-2xl relative">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-800 flex items-end justify-center pb-3">
                     <img 
                       src="/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png" 
                       alt="Neeraj Madkar" 
-                      className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover object-[center_20%] hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </div>
