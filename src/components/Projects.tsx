@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,7 +7,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
-    // Video Editing Projects with thumbnails
+    // Video Editing Projects with new thumbnails
     {
       id: 1,
       title: "Creative Video Edit #1",
@@ -16,7 +15,7 @@ const Projects = () => {
       category: "video",
       tags: ["Premiere Pro", "After Effects", "Motion Graphics"],
       videoUrl: "https://drive.google.com/file/d/1o1DMkvRBvNJFvI3S4N_Q-U6Ws68keDbQ/view?usp=drive_link",
-      thumbnail: "/lovable-uploads/c05312dd-a287-41ae-a891-6dd12351a89b.png",
+      thumbnail: "/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -27,7 +26,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Mobile Editing", "Social Media"],
       videoUrl: "https://youtube.com/shorts/uaCeP8Xke24?si=H_2Xm0l7dyOLtpSq",
-      thumbnail: "/lovable-uploads/0d865d7d-f639-482f-8c96-ad287f94ce1a.png",
+      thumbnail: "/lovable-uploads/d23d194f-d66d-4534-8bff-0ccf066c1da2.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -38,7 +37,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Visual Effects", "Storytelling"],
       videoUrl: "https://youtube.com/shorts/Tl5o8J8p5Ck?si=TiNSYsXAZrsVoXex",
-      thumbnail: "/lovable-uploads/e0af69df-0997-47c5-8945-a52f5adb5d0d.png",
+      thumbnail: "/lovable-uploads/bce10a45-321e-45c8-a154-aed572bc0a4c.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -49,7 +48,7 @@ const Projects = () => {
       category: "video",
       tags: ["YouTube Shorts", "Audio Sync", "High Energy"],
       videoUrl: "https://youtube.com/shorts/WqQK1u4XpZE?si=UOiAzfuzI8lJkFGm",
-      thumbnail: "/lovable-uploads/4a72b6fc-86a8-461a-b267-9a8fe1510414.png",
+      thumbnail: "/lovable-uploads/dce811a7-14de-43a1-bcfb-184014457fbb.png",
       gradient: "from-red-400 to-pink-600",
       isVideo: true
     },
@@ -100,7 +99,7 @@ const Projects = () => {
       gradient: "from-orange-400 to-red-600"
     },
 
-    // Graphics Design Projects
+    // Graphics Design Projects - Added old video thumbnails and new designs
     {
       id: 9,
       title: "AdSmart AI - Web Design",
@@ -144,6 +143,78 @@ const Projects = () => {
       category: "graphics",
       tags: ["Course Design", "Educational", "Software Training", "Professional"],
       image: "/lovable-uploads/7ef4978a-1f47-4332-a98c-ae032efa225c.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 14,
+      title: "Medical Services - Doctor Information",
+      description: "Professional medical service brochure design showcasing doctor credentials and services.",
+      category: "graphics",
+      tags: ["Medical Design", "Healthcare", "Professional Brochure", "Information Design"],
+      image: "/lovable-uploads/4c3996ed-7b4c-482a-ba61-32dbcae55fdc.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 15,
+      title: "Healthcare Services Portfolio",
+      description: "Comprehensive healthcare services design with modern medical interface elements.",
+      category: "graphics",
+      tags: ["Healthcare Design", "Medical Services", "Modern UI", "Professional"],
+      image: "/lovable-uploads/289143c3-b7e0-4588-bcd8-0fac20e6a2da.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 16,
+      title: "AI Marketing Campaign",
+      description: "Futuristic AI-focused marketing design exploring the future of digital marketing.",
+      category: "graphics",
+      tags: ["AI Design", "Marketing Campaign", "Futuristic", "Digital Marketing"],
+      image: "/lovable-uploads/10bc52dc-35e5-4b9f-8f7e-e2a670a4ee63.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 17,
+      title: "DG Neers Media Logo",
+      description: "Elegant and professional logo design for DG Neers Media with sophisticated typography.",
+      category: "graphics",
+      tags: ["Logo Design", "Branding", "Typography", "Corporate Identity"],
+      image: "/lovable-uploads/81dd9d51-3185-4eb3-91ce-8c45dee466ee.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 18,
+      title: "Video Thumbnail Design #1",
+      description: "Eye-catching video thumbnail design with engaging visual elements and typography.",
+      category: "graphics",
+      tags: ["Thumbnail Design", "Video Graphics", "Visual Design", "Social Media"],
+      image: "/lovable-uploads/c05312dd-a287-41ae-a891-6dd12351a89b.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 19,
+      title: "Video Thumbnail Design #2",
+      description: "Dynamic video thumbnail with bold colors and engaging visual storytelling.",
+      category: "graphics",
+      tags: ["Thumbnail Design", "YouTube Graphics", "Visual Impact", "Content Creation"],
+      image: "/lovable-uploads/0d865d7d-f639-482f-8c96-ad287f94ce1a.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 20,
+      title: "Video Thumbnail Design #3",
+      description: "Creative video thumbnail design showcasing visual effects and engaging composition.",
+      category: "graphics",
+      tags: ["Thumbnail Design", "Visual Effects", "Creative Design", "Digital Art"],
+      image: "/lovable-uploads/e0af69df-0997-47c5-8945-a52f5adb5d0d.png",
+      gradient: "from-purple-400 to-blue-600"
+    },
+    {
+      id: 21,
+      title: "Video Thumbnail Design #4",
+      description: "High-energy video thumbnail with bold graphics and attention-grabbing design elements.",
+      category: "graphics",
+      tags: ["Thumbnail Design", "High Energy", "Bold Graphics", "Visual Impact"],
+      image: "/lovable-uploads/4a72b6fc-86a8-461a-b267-9a8fe1510414.png",
       gradient: "from-purple-400 to-blue-600"
     }
   ];
