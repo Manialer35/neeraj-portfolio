@@ -1,5 +1,5 @@
 
-import { Award, Users, Coffee, Clock } from 'lucide-react';
+import { Award, Users, Coffee, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const About = () => {
@@ -34,42 +34,28 @@ const About = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          {/* Profile Section */}
-          <div className="space-y-6 animate-fade-in">
-            <div className="flex items-center space-x-6">
-              {/* Large Profile Image with Decorations */}
-              <div className="relative">
-                {/* Floating Particles */}
-                <div className="absolute -top-4 -left-4 w-2 h-2 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-bounce opacity-70"></div>
-                <div className="absolute -top-6 -right-2 w-3 h-3 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce delay-200 opacity-70"></div>
-                <div className="absolute -bottom-2 -left-6 w-2 h-2 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-bounce delay-400 opacity-70"></div>
-                <div className="absolute -bottom-4 -right-4 w-3 h-3 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full animate-bounce delay-600 opacity-70"></div>
-                
-                {/* Rotating Rings */}
-                <div className="absolute inset-0 w-32 h-32 sm:w-36 sm:h-36 animate-spin-slow">
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-pink-400/30"></div>
-                </div>
-                
-                {/* Pulsing Outer Ring */}
-                <div className="absolute inset-0 w-36 h-36 sm:w-40 sm:h-40 rounded-full border border-purple-400/20 animate-ping"></div>
-                
-                {/* Main Image Container */}
-                <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 shadow-2xl relative">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900">
-                    <img 
-                      src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face" 
-                      alt="Neeraj Madkar" 
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  {/* Animated Glow */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 animate-pulse"></div>
-                </div>
-              </div>
-              
+          {/* Content Section - Left Side */}
+          <div className="space-y-6 animate-fade-in order-2 lg:order-1">
+            <div className="flex items-center space-x-6 mb-6">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">Neeraj Madkar</h3>
-                <p className="text-rose-400 font-medium">Creative Developer</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">Neeraj Madkar</h3>
+                <p className="text-rose-400 font-medium text-lg">Creative Developer</p>
+              </div>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-emerald-400" />
+                <span className="text-sm sm:text-base">neerajmadkar35@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-purple-400" />
+                <span className="text-sm sm:text-base">+91 8888769281</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-rose-400" />
+                <span className="text-sm sm:text-base">India, Maharashtra, Pune</span>
               </div>
             </div>
             
@@ -113,29 +99,83 @@ const About = () => {
             </div>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-4 sm:gap-6">
-            {stats.map((stat, index) => (
-              <Card 
-                key={stat.label} 
-                className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader className="pb-2">
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r ${stat.color} p-2 sm:p-2.5 mb-2`}>
-                    <stat.icon className="w-full h-full text-white" />
+          {/* Image and Stats Section - Right Side */}
+          <div className="space-y-8 animate-fade-in order-1 lg:order-2">
+            {/* Large Profile Image with Enhanced Decorations */}
+            <div className="flex justify-center lg:justify-end mb-8">
+              <div className="relative">
+                {/* Multiple Floating Particles */}
+                <div className="absolute -top-8 -left-8 w-4 h-4 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full animate-bounce opacity-70"></div>
+                <div className="absolute -top-12 -right-4 w-5 h-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce delay-200 opacity-70"></div>
+                <div className="absolute -bottom-4 -left-12 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-bounce delay-400 opacity-70"></div>
+                <div className="absolute -bottom-8 -right-8 w-5 h-5 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full animate-bounce delay-600 opacity-70"></div>
+                
+                {/* Additional floating elements */}
+                <div className="absolute -top-4 left-16 w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping delay-100"></div>
+                <div className="absolute top-16 -right-4 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-ping delay-300"></div>
+                <div className="absolute bottom-16 -left-4 w-2 h-2 bg-gradient-to-r from-violet-400 to-purple-500 rounded-full animate-ping delay-500"></div>
+                
+                {/* Multiple Rotating Rings */}
+                <div className="absolute inset-0 w-64 h-64 sm:w-72 sm:h-72 animate-spin-slow">
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-pink-400/30"></div>
+                </div>
+                
+                <div className="absolute inset-0 w-68 h-68 sm:w-76 sm:h-76 animate-[spin_4s_linear_infinite_reverse]">
+                  <div className="absolute inset-0 rounded-full border border-dotted border-purple-400/25"></div>
+                </div>
+                
+                {/* Pulsing Outer Rings */}
+                <div className="absolute inset-0 w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-purple-400/20 animate-ping"></div>
+                <div className="absolute inset-0 w-76 h-76 sm:w-84 sm:h-84 rounded-full border border-blue-400/15 animate-pulse"></div>
+                
+                {/* Main Image Container - Large Size */}
+                <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-2 shadow-2xl relative">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900">
+                    <img 
+                      src="/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png" 
+                      alt="Neeraj Madkar" 
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <CardTitle className="text-2xl sm:text-3xl font-bold text-white mb-1">
-                    {stat.value}
-                  </CardTitle>
-                  <CardDescription className="text-gray-400 text-sm">
-                    {stat.label}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+                  {/* Enhanced Animated Glow */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 animate-pulse"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400/10 via-cyan-400/10 to-violet-400/10 animate-[pulse_3s_ease-in-out_infinite_alternate]"></div>
+                </div>
+                
+                {/* Enhanced Status Indicator */}
+                <div className="absolute -top-3 -right-3 w-16 h-16 bg-emerald-400 rounded-full animate-pulse border-4 border-slate-800 flex items-center justify-center">
+                  <div className="w-5 h-5 bg-emerald-600 rounded-full animate-ping"></div>
+                </div>
+                
+                {/* Additional decorative elements */}
+                <div className="absolute top-0 left-0 w-full h-full rounded-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-[spin_6s_linear_infinite] pointer-events-none"></div>
+              </div>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              {stats.map((stat, index) => (
+                <Card 
+                  key={stat.label} 
+                  className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 shadow-lg"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader className="pb-2">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r ${stat.color} p-2 sm:p-2.5 mb-2`}>
+                      <stat.icon className="w-full h-full text-white" />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <CardTitle className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                      {stat.value}
+                    </CardTitle>
+                    <CardDescription className="text-gray-400 text-sm">
+                      {stat.label}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
