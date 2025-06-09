@@ -1,4 +1,3 @@
-
 import { Award, Users, Coffee, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -128,27 +127,21 @@ const About = () => {
                 <div className="absolute inset-0 w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-purple-400/20 animate-ping"></div>
                 <div className="absolute inset-0 w-76 h-76 sm:w-84 sm:h-84 rounded-full border border-blue-400/15 animate-pulse"></div>
                 
-                {/* Main Image Container - Large Size with Enhanced Clarity */}
+                {/* Main Image Container - Fixed sizing and clarity */}
                 <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-2 shadow-2xl relative">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-indigo-900">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
                     <img 
                       src="/lovable-uploads/24d5cd86-83ac-4322-a1ec-181b3160247a.png" 
                       alt="Neeraj Madkar" 
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 brightness-125 contrast-110 saturate-110 filter"
+                      className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  {/* Enhanced Animated Glow */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-blue-400/20 animate-pulse"></div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400/10 via-cyan-400/10 to-violet-400/10 animate-[pulse_3s_ease-in-out_infinite_alternate]"></div>
                 </div>
                 
                 {/* Enhanced Status Indicator */}
                 <div className="absolute -top-3 -right-3 w-16 h-16 bg-emerald-400 rounded-full animate-pulse border-4 border-slate-800 flex items-center justify-center">
                   <div className="w-5 h-5 bg-emerald-600 rounded-full animate-ping"></div>
                 </div>
-                
-                {/* Additional decorative elements */}
-                <div className="absolute top-0 left-0 w-full h-full rounded-full bg-gradient-to-r from-transparent via-white/5 to-transparent animate-[spin_6s_linear_infinite] pointer-events-none"></div>
               </div>
             </div>
 

@@ -19,18 +19,38 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link for sending email
-    const mailtoLink = `mailto:neerajmadkar35@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
+    // Create a more reliable way to send email
+    const emailBody = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    const emailSubject = encodeURIComponent(formData.subject);
     
-    // Open default email client
-    window.location.href = mailtoLink;
+    // Try different approaches for opening email client
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=neerajmadkar35@gmail.com&su=${emailSubject}&body=${emailBody}`;
+    const mailtoLink = `mailto:neerajmadkar35@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     
-    toast({
-      title: "Email Client Opened!",
-      description: "Your default email client has been opened with the message. Please send it to complete the contact.",
-    });
+    // First try to open Gmail in a new tab
+    try {
+      const newWindow = window.open(gmailLink, '_blank');
+      if (newWindow) {
+        toast({
+          title: "Email Draft Opened!",
+          description: "Gmail has been opened in a new tab with your message. Please send it to complete the contact.",
+        });
+      } else {
+        // Fallback to mailto
+        window.location.href = mailtoLink;
+        toast({
+          title: "Email Client Opened!",
+          description: "Your default email client has been opened with the message. Please send it to complete the contact.",
+        });
+      }
+    } catch (error) {
+      // Fallback to mailto
+      window.location.href = mailtoLink;
+      toast({
+        title: "Email Client Opened!",
+        description: "Your default email client has been opened with the message. Please send it to complete the contact.",
+      });
+    }
     
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
