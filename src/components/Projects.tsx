@@ -78,28 +78,28 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+    <section id="projects" className="py-16 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             A showcase of my work across different creative and technical domains
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
           {filters.map((filter) => (
             <Button
               key={filter.id}
               variant={activeFilter === filter.id ? "default" : "outline"}
               onClick={() => setActiveFilter(filter.id)}
-              className={`transition-all duration-300 ${
+              className={`transition-all duration-300 text-xs sm:text-sm md:text-base px-3 py-2 sm:px-4 sm:py-2 ${
                 activeFilter === filter.id 
-                  ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white border-0" 
-                  : "hover:bg-accent"
+                  ? "bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 text-white border-0 shadow-lg" 
+                  : "hover:bg-pink-50 border-pink-200 text-pink-600 hover:border-pink-300"
               }`}
             >
               {filter.label}
@@ -108,38 +108,38 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.id}
-              className="group hover-scale cursor-pointer border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 overflow-hidden"
+              className="group hover-scale cursor-pointer border-border/50 bg-card/80 backdrop-blur-sm hover:bg-card transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300`}></div>
               </div>
               
-              <CardHeader>
-                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg sm:text-xl font-bold group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-muted-foreground text-sm sm:text-base">
                   {project.description}
                 </CardDescription>
               </CardHeader>
               
               <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.tags.map((tag) => (
                     <Badge 
                       key={tag} 
                       variant="secondary"
-                      className="group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300"
+                      className="group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300 text-xs sm:text-sm"
                     >
                       {tag}
                     </Badge>

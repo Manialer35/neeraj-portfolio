@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -58,29 +57,29 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+    <section id="contact" className="py-16 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Ready to bring your ideas to life? Let's discuss your next project
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm animate-fade-in">
+          <Card className="border-border/50 bg-card/80 backdrop-blur-sm animate-fade-in shadow-sm">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold">Send a Message</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-xl sm:text-2xl font-bold">Send a Message</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Fill out the form below and I'll get back to you within 24 hours.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Input
                       name="name"
@@ -130,7 +129,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0"
+                  className="w-full bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 hover:from-pink-600 hover:via-rose-500 hover:to-purple-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
@@ -172,13 +171,13 @@ const Contact = () => {
               ))}
             </div>
 
-            <Card className="border-border/50 bg-gradient-to-r from-blue-500/10 to-purple-600/10 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <h4 className="text-xl font-bold mb-2">Available for Freelance</h4>
-                <p className="text-muted-foreground mb-4">
+            <Card className="border-border/50 bg-gradient-to-r from-pink-100/50 to-purple-100/50 backdrop-blur-sm shadow-sm">
+              <CardContent className="p-4 sm:p-6 text-center">
+                <h4 className="text-lg sm:text-xl font-bold mb-2">Available for Freelance</h4>
+                <p className="text-muted-foreground mb-4 text-sm sm:text-base">
                   Currently accepting new projects and collaborations
                 </p>
-                <div className="w-3 h-3 bg-green-400 rounded-full mx-auto animate-pulse"></div>
+                <div className="w-3 h-3 bg-emerald-400 rounded-full mx-auto animate-pulse"></div>
               </CardContent>
             </Card>
           </div>

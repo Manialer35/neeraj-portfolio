@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -20,20 +19,20 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+    <section id="about" className="py-16 sm:py-20 bg-gradient-to-br from-pink-50/50 to-purple-50/50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 bg-clip-text text-transparent">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Passionate about creating innovative digital solutions
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
-            <div className="text-lg text-muted-foreground leading-relaxed">
+            <div className="text-base sm:text-lg text-muted-foreground leading-relaxed space-y-4">
               <p className="mb-4">
                 I'm a creative technologist with a passion for bringing ideas to life through code, design, and storytelling. 
                 My journey spans across multiple disciplines, allowing me to create comprehensive digital experiences that 
@@ -50,7 +49,7 @@ const About = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground">Key Achievements</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Key Achievements</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {achievements.map((achievement, index) => (
                   <div 
@@ -58,8 +57,8 @@ const About = () => {
                     className="flex items-center space-x-2 group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    <div className="w-3 h-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 text-sm sm:text-base">
                       {achievement}
                     </span>
                   </div>
@@ -69,34 +68,34 @@ const About = () => {
           </div>
 
           <div className="space-y-6 animate-fade-in">
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Professional Avatar</h3>
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm shadow-sm">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground">Professional Avatar</h3>
                 <div className="flex justify-center mb-6">
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 to-purple-600 p-2 hover-scale">
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-white">YN</span>
+                  <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-500 p-2 hover-scale">
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center">
+                      <span className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">YN</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <h4 className="text-xl font-semibold mb-2">Creative Developer</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="text-lg sm:text-xl font-semibold mb-2">Creative Developer</h4>
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     Bridging the gap between creativity and technology
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-foreground">Tools & Technologies</h3>
-                <div className="flex flex-wrap gap-2">
+            <Card className="border-border/50 bg-card/80 backdrop-blur-sm shadow-sm">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground">Tools & Technologies</h3>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {tools.map((tool, index) => (
                     <Badge 
                       key={tool}
                       variant="secondary"
-                      className="hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600 hover:text-white transition-all duration-300 cursor-default"
+                      className="hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-500 hover:text-white transition-all duration-300 cursor-default text-xs sm:text-sm"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {tool}
