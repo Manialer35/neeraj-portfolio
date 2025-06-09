@@ -87,4 +87,31 @@
   .bg-rich-dark {
     @apply bg-gradient-to-br from-slate-800 via-gray-900 to-slate-900;
   }
+
+  /* Matrix and Tech Animations */
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100px, 100px);
+    }
+  }
+
+  .animate-slide-right {
+    animation: slide-right 10s linear infinite;
+  }
+
+  .animate-grid-move {
+    animation: grid-move 20s linear infinite;
+  }
 }

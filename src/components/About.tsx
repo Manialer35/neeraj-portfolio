@@ -1,109 +1,98 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+
+import { Award, Users, Coffee, Clock } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const About = () => {
-  const achievements = [
-    "5+ Years of Creative Experience",
-    "50+ Successful Projects",
-    "Multiple Industry Certifications",
-    "International Client Base"
-  ];
-
-  const tools = [
-    "Adobe Creative Suite",
-    "React & Next.js",
-    "Python & TensorFlow",
-    "Android Studio",
-    "Figma & Sketch",
-    "Node.js & MongoDB"
+  const stats = [
+    { icon: Award, label: "Projects Completed", value: "50+", color: "from-rose-500 to-pink-600" },
+    { icon: Users, label: "Happy Clients", value: "30+", color: "from-purple-500 to-indigo-600" },
+    { icon: Coffee, label: "Cups of Coffee", value: "1000+", color: "from-amber-500 to-orange-600" },
+    { icon: Clock, label: "Years Experience", value: "5+", color: "from-emerald-500 to-teal-600" }
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 bg-gradient-to-br from-pink-50/50 to-purple-50/50">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="about" className="py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-indigo-950">
+      {/* Background with Matrix Theme */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=1920&h=1080&fit=crop')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-gray-900/95 to-indigo-950/90"></div>
+      </div>
+
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,182,193,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,182,193,0.03)_1px,transparent_1px)] bg-[size:100px_100px] animate-[grid-move_20s_linear_infinite]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-rose-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
             About Me
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-            Passionate about creating innovative digital solutions
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+            Passionate developer with a creative mindset and technical expertise
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          {/* Profile Section */}
           <div className="space-y-6 animate-fade-in">
-            <div className="text-base sm:text-lg text-muted-foreground leading-relaxed space-y-4">
-              <p className="mb-4">
-                I'm a creative technologist with a passion for bringing ideas to life through code, design, and storytelling. 
-                My journey spans across multiple disciplines, allowing me to create comprehensive digital experiences that 
-                resonate with users and drive results.
-              </p>
-              <p className="mb-4">
-                From crafting compelling video narratives to developing cutting-edge AI applications, I believe in the 
-                power of technology to solve real-world problems and create meaningful connections.
-              </p>
-              <p>
-                When I'm not coding or designing, you'll find me exploring the latest tech trends, experimenting with 
-                new creative tools, or collaborating with fellow creators on innovative projects.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Key Achievements</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {achievements.map((achievement, index) => (
-                  <div 
-                    key={achievement}
-                    className="flex items-center space-x-2 group"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="w-3 h-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 group-hover:scale-125 transition-transform duration-300"></div>
-                    <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 text-sm sm:text-base">
-                      {achievement}
-                    </span>
-                  </div>
-                ))}
+            <div className="flex items-center space-x-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-rose-400 via-pink-400 to-purple-500 p-1 shadow-xl">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
+                    alt="Profile" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">Your Name</h3>
+                <p className="text-rose-400 font-medium">Creative Developer</p>
+              </div>
+            </div>
+            
+            <div className="prose prose-invert max-w-none">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
+                I'm a passionate creative developer with over 5 years of experience in crafting digital experiences. 
+                My journey spans across multiple domains including video editing, graphics design, web development, 
+                AI projects, and Android development.
+              </p>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
+                I believe in the power of combining creativity with technology to solve real-world problems. 
+                Whether it's creating stunning visuals, developing intuitive applications, or implementing 
+                cutting-edge AI solutions, I'm always excited to take on new challenges.
+              </p>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                When I'm not coding or designing, you can find me exploring new technologies, contributing to 
+                open-source projects, or mentoring aspiring developers.
+              </p>
             </div>
           </div>
 
-          <div className="space-y-6 animate-fade-in">
-            <Card className="border-border/50 bg-card/80 backdrop-blur-sm shadow-sm">
-              <CardContent className="p-4 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground">Professional Avatar</h3>
-                <div className="flex justify-center mb-6">
-                  <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-500 p-2 hover-scale">
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center">
-                      <span className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">YN</span>
-                    </div>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+            {stats.map((stat, index) => (
+              <Card 
+                key={stat.label} 
+                className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 shadow-lg"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader className="pb-2">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r ${stat.color} p-2 sm:p-2.5 mb-2`}>
+                    <stat.icon className="w-full h-full text-white" />
                   </div>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-lg sm:text-xl font-semibold mb-2">Creative Developer</h4>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    Bridging the gap between creativity and technology
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/50 bg-card/80 backdrop-blur-sm shadow-sm">
-              <CardContent className="p-4 sm:p-6">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground">Tools & Technologies</h3>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {tools.map((tool, index) => (
-                    <Badge 
-                      key={tool}
-                      variant="secondary"
-                      className="hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-500 hover:text-white transition-all duration-300 cursor-default text-xs sm:text-sm"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      {tool}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <CardTitle className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                    {stat.value}
+                  </CardTitle>
+                  <CardDescription className="text-gray-400 text-sm">
+                    {stat.label}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

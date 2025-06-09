@@ -15,7 +15,7 @@ const Skills = () => {
       icon: Palette,
       title: "Graphics Design",
       description: "Creative visual design solutions for branding, digital media, and print materials.",
-      gradient: "from-purple-500 to-pink-400",
+      gradient: "from-rose-500 to-pink-400",
       skills: ["Adobe Photoshop", "Illustrator", "Figma", "Brand Identity"]
     },
     {
@@ -42,10 +42,22 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="skills" className="py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-rose-50 to-pink-50">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1920&h=1080&fit=crop')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50/95 via-rose-50/95 to-pink-50/95"></div>
+      </div>
+
+      {/* Animated Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,182,193,0.1)_0%,transparent_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-700 via-gray-800 to-slate-900 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-700 via-rose-600 to-purple-700 bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-4">
