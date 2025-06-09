@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,59 +7,103 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const projects = [
+    // Video Editing Projects
     {
       id: 1,
-      title: "Brand Identity Video Campaign",
-      description: "Complete video editing project for a tech startup including motion graphics and sound design.",
+      title: "Creative Video Edit #1",
+      description: "Professional video editing showcasing creative transitions and effects.",
       category: "video",
       tags: ["Premiere Pro", "After Effects", "Motion Graphics"],
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&h=400",
-      gradient: "from-red-400 to-pink-600"
+      videoUrl: "https://drive.google.com/file/d/1o1DMkvRBvNJFvI3S4N_Q-U6Ws68keDbQ/view?usp=drive_link",
+      gradient: "from-red-400 to-pink-600",
+      isVideo: true
     },
     {
       id: 2,
-      title: "E-commerce Web Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and modern payment integration.",
-      category: "web",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=400",
-      gradient: "from-green-400 to-teal-600"
+      title: "YouTube Short #1",
+      description: "Engaging short-form content with dynamic editing and sound design.",
+      category: "video",
+      tags: ["YouTube Shorts", "Mobile Editing", "Social Media"],
+      videoUrl: "https://youtube.com/shorts/uaCeP8Xke24?si=H_2Xm0l7dyOLtpSq",
+      gradient: "from-red-400 to-pink-600",
+      isVideo: true
     },
     {
       id: 3,
-      title: "AI-Powered Design Tool",
-      description: "Machine learning application that generates design suggestions based on user preferences.",
-      category: "ai",
-      tags: ["Python", "TensorFlow", "React", "OpenAI"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400",
-      gradient: "from-orange-400 to-red-600"
+      title: "YouTube Short #2",
+      description: "Creative storytelling through quick cuts and visual effects.",
+      category: "video",
+      tags: ["YouTube Shorts", "Visual Effects", "Storytelling"],
+      videoUrl: "https://youtube.com/shorts/Tl5o8J8p5Ck?si=TiNSYsXAZrsVoXex",
+      gradient: "from-red-400 to-pink-600",
+      isVideo: true
     },
     {
       id: 4,
-      title: "Mobile Fitness App",
-      description: "Android application for fitness tracking with real-time analytics and social features.",
-      category: "android",
-      tags: ["Kotlin", "Jetpack Compose", "Firebase", "ML Kit"],
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&h=400",
-      gradient: "from-blue-400 to-indigo-600"
+      title: "YouTube Short #3",
+      description: "High-energy video editing with synchronized audio and visuals.",
+      category: "video",
+      tags: ["YouTube Shorts", "Audio Sync", "High Energy"],
+      videoUrl: "https://youtube.com/shorts/WqQK1u4XpZE?si=UOiAzfuzI8lJkFGm",
+      gradient: "from-red-400 to-pink-600",
+      isVideo: true
     },
+    
+    // Web Development Projects
     {
       id: 5,
+      title: "BoostUpMedia - Digital Marketing Agency",
+      description: "Modern digital marketing agency website with responsive design and engaging animations.",
+      category: "web",
+      tags: ["React", "Tailwind CSS", "Digital Marketing", "Responsive"],
+      image: "/lovable-uploads/12f20349-c5e1-40fd-a03b-a496a3b98816.png",
+      projectUrl: "https://boostupmedia.in/",
+      gradient: "from-green-400 to-teal-600"
+    },
+    {
+      id: 6,
+      title: "DGineers - Digital Transformation",
+      description: "Professional website for digital transformation services with modern UI/UX design.",
+      category: "web",
+      tags: ["Web Design", "Digital Services", "Modern UI", "Business"],
+      image: "/lovable-uploads/188f9d3a-9265-4dc9-b3a8-d94a7a6bf61f.png",
+      projectUrl: "https://dgineers.com/",
+      gradient: "from-green-400 to-teal-600"
+    },
+
+    // Android Development Projects
+    {
+      id: 7,
+      title: "Avishkar Career Compass",
+      description: "Mobile application for career guidance and educational resources with user authentication.",
+      category: "android",
+      tags: ["React Native", "Career Guidance", "Authentication", "Education"],
+      image: "/lovable-uploads/ff2da13a-9617-4352-ad3d-8cfbce21b134.png",
+      projectUrl: "https://avishkar-career-compass.lovable.app/auth",
+      gradient: "from-blue-400 to-indigo-600"
+    },
+
+    // AI Projects
+    {
+      id: 8,
+      title: "Fake News Detection System",
+      description: "AI-powered system using LSTM neural networks to detect and classify fake news articles.",
+      category: "ai",
+      tags: ["Python", "LSTM", "Machine Learning", "NLP"],
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400",
+      projectUrl: "https://github.com/Manialer35/fake-news-detection-lstm",
+      gradient: "from-orange-400 to-red-600"
+    },
+
+    // Graphics Design Projects (keeping original examples)
+    {
+      id: 9,
       title: "Corporate Branding Package",
       description: "Complete visual identity design including logo, business cards, and marketing materials.",
       category: "graphics",
       tags: ["Illustrator", "Photoshop", "Brand Design", "Print"],
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=400",
       gradient: "from-purple-400 to-blue-600"
-    },
-    {
-      id: 6,
-      title: "Real-time Chat Application",
-      description: "WebSocket-based chat application with file sharing and video call capabilities.",
-      category: "web",
-      tags: ["Socket.io", "React", "WebRTC", "Express"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400",
-      gradient: "from-green-400 to-teal-600"
     }
   ];
 
@@ -76,6 +119,14 @@ const Projects = () => {
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
+
+  const handleProjectClick = (project: any) => {
+    if (project.videoUrl) {
+      window.open(project.videoUrl, '_blank');
+    } else if (project.projectUrl) {
+      window.open(project.projectUrl, '_blank');
+    }
+  };
 
   return (
     <section id="projects" className="py-16 sm:py-20">
@@ -114,14 +165,27 @@ const Projects = () => {
               key={project.id}
               className="group hover-scale cursor-pointer border-border/50 bg-card/80 backdrop-blur-sm hover:bg-card transition-all duration-300 overflow-hidden shadow-sm hover:shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handleProjectClick(project)}
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                {project.isVideo ? (
+                  <div className="w-full h-40 sm:h-48 bg-gradient-to-br from-red-400 to-pink-600 flex items-center justify-center relative">
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">▶️</div>
+                      <p className="text-sm font-medium">Click to Watch Video</p>
+                    </div>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                  </div>
+                ) : (
+                  <>
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                  </>
+                )}
               </div>
               
               <CardHeader className="pb-3">
